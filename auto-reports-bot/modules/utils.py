@@ -99,7 +99,7 @@ async def delete_report(parsed: ReportParsed):
 		return
 
 	# Помечаем отчет как удаленный в основной БД
-	await report.update(is_deleted=True)
+	await report.update(is_deleted=True, deleted_at=dt.utcnow())
 	# Удаляем связь msg_id -> report_id из локальной таблицы
 	execute(f"DELETE FROM reports WHERE msg_id='{parsed.msg_id}'")
 

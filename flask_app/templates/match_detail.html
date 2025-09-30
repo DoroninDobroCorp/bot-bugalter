@@ -9,54 +9,110 @@
 <p class="text-lg font-medium text-gray-600 -mt-6 mb-6 hidden md:block">{{ match.name }}</p>
 
 {% if reports %}
-    <!-- Кнопка "Пометить все" сверху для удобства -->
-    <div class="flex justify-end mb-6">
+    <!-- Фильтр и кнопка "Пометить все" -->
+    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6" x-data="{ 
+        filterSource: '', 
+        sortBySource: false,
+        get filteredReports() {
+            let reports = Array.from(document.querySelectorAll('.report-card'));
+            
+            // Применяем фильтр
+            if (this.filterSource) {
+                reports.forEach(r => {
+                    const source = r.dataset.source;
+                    r.style.display = (source === this.filterSource) ? 'block' : 'none';
+                });
+            } else {
+                reports.forEach(r => r.style.display = 'block');
+            }
+            
+            // Применяем сортировку
+            if (this.sortBySource) {
+                const container = document.querySelector('.reports-container');
+                reports.sort((a, b) => {
+                    const sourceA = a.dataset.source || '';
+                    const sourceB = b.dataset.source || '';
+                    return sourceA.localeCompare(sourceB);
+                });
+                reports.forEach(r => container.appendChild(r));
+            }
+        }
+    }">
+        <div class="flex flex-col sm:flex-row gap-3">
+            <div class="flex items-center gap-2">
+                <label for="source-filter" class="text-sm font-medium text-gray-700 whitespace-nowrap">Источник:</label>
+                <select 
+                    id="source-filter" 
+                    x-model="filterSource" 
+                    @change="filteredReports"
+                    class="rounded-md border-gray-300 text-sm shadow-sm focus:border-accent focus:ring-accent"
+                >
+                    <option value="">Все</option>
+                    {% set sources = reports | map(attribute='source') | unique | list %}
+                    {% for source in sources %}
+                    {% if source %}
+                    <option value="{{ source.name }}">{{ source.name }}</option>
+                    {% endif %}
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="flex items-center gap-2">
+                <input 
+                    type="checkbox" 
+                    id="sort-source" 
+                    x-model="sortBySource" 
+                    @change="filteredReports"
+                    class="rounded border-gray-300 text-accent focus:ring-accent h-4 w-4"
+                >
+                <label for="sort-source" class="text-sm font-medium text-gray-700">Сортировать по источнику</label>
+            </div>
+        </div>
         <form action="{{ url_for('mark_all_checked', match_id=match.id) }}" method="post">
-            <button type="submit" class="rounded-md bg-success px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700 transition-colors">
+            <button type="submit" class="w-full sm:w-auto rounded-md bg-success px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700 transition-colors">
                 Пометить все проверенными
             </button>
         </form>
     </div>
 
-    <div class="space-y-5">
+    <div class="space-y-5 reports-container">
         {% for report in reports %}
-        <div class="bg-white rounded-lg shadow-md transition-all duration-300 overflow-hidden">
+        <div class="bg-white rounded-lg shadow-md transition-all duration-300 overflow-hidden report-card" data-source="{{ report.source.name if report.source else '' }}">
             <div class="p-5">
                 <!-- Основная информация -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-6">
                     <div>
                         <dt class="text-sm font-medium text-gray-500">Дата</dt>
-                        <dd class="mt-1 text-sm text-gray-900">{{ report.date.strftime('%d.%m.%y %H:%M') }}</dd>
+                        <dd class="mt-1 text-sm text-gray-900 selectable">{{ report.date.strftime('%d.%m.%y %H:%M') }}</dd>
                     </div>
                     <div>
                         <dt class="text-sm font-medium text-gray-500">Источник</dt>
-                        <dd class="mt-1 text-sm text-gray-900 truncate">{{ report.source.name if report.source else '-' }}</dd>
+                        <dd class="mt-1 text-sm text-gray-900 break-words selectable">{{ report.source.name if report.source else '-' }}</dd>
                     </div>
                     <div>
                         <dt class="text-sm font-medium text-gray-500">Страна</dt>
-                        <dd class="mt-1 text-sm text-gray-900 truncate">{{ report.country.name if report.country else '-' }}</dd>
+                        <dd class="mt-1 text-sm text-gray-900 break-words selectable">{{ report.country.name if report.country else '-' }}</dd>
                     </div>
                     <div>
                         <dt class="text-sm font-medium text-gray-500">Букмекер</dt>
-                        <dd class="mt-1 text-sm text-gray-900 truncate">{{ report.bookmaker.bk_name if report.bookmaker else '-' }}</dd>
+                        <dd class="mt-1 text-sm text-gray-900 break-words selectable">{{ report.bookmaker.bk_name if report.bookmaker else '-' }}</dd>
                     </div>
                     <div>
                         <dt class="text-sm font-medium text-gray-500">Профиль</dt>
-                        <dd class="mt-1 text-sm text-gray-900 truncate">{{ report.bookmaker.name if report.bookmaker else '-' }}</dd>
+                        <dd class="mt-1 text-sm text-gray-900 break-words selectable">{{ report.bookmaker.name if report.bookmaker else '-' }}</dd>
                     </div>
                     <div>
                         <dt class="text-sm font-medium text-gray-500">Ставка / Коэф.</dt>
-                        <dd class="mt-1 text-sm text-gray-900">{{ report.bet_amount }} / {{ report.coefficient }}</dd>
+                        <dd class="mt-1 text-sm text-gray-900 selectable">{{ report.bet_amount }} / {{ report.coefficient }}</dd>
                     </div>
                     <div>
                         <dt class="text-sm font-medium text-gray-500">Профит</dt>
-                        <dd class="mt-1 text-md font-semibold {% if report.profit > 0 %}text-success{% elif report.profit < 0 %}text-danger{% else %}text-gray-700{% endif %}">
+                        <dd class="mt-1 text-md font-semibold {% if report.profit > 0 %}text-success{% elif report.profit < 0 %}text-danger{% else %}text-gray-700{% endif %} selectable">
                              {{ "%.2f"|format(report.profit) }}
                         </dd>
                     </div>
                     <div class="col-span-2 md:col-span-1">
                         <dt class="text-sm font-medium text-gray-500">Сотрудники</dt>
-                        <dd class="mt-1 text-sm text-gray-900">
+                        <dd class="mt-1 text-sm text-gray-900 selectable">
                             {% for employee in report.employees %}{{ employee.second_name }}{% if not loop.last %}, {% endif %}{% endfor %}
                         </dd>
                     </div>
@@ -96,4 +152,14 @@
         <p class="font-bold">Нет отчетов для этого матча.</p>
     </div>
 {% endif %}
+
+<style>
+.selectable {
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+    user-select: text !important;
+}
+</style>
+
 {% endblock %}

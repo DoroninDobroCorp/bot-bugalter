@@ -241,6 +241,7 @@ class Report(Model):
 	is_over = Column(Boolean, default=False)
 	is_express = Column(Boolean, default=False)
 	is_deleted = Column(Boolean, default=False, index=True)
+	deleted_at = Column(DateTime, index=True)
 
 	source = relationship('Source', back_populates='reports', lazy='selectin')
 	country = relationship('Country', back_populates='reports', lazy='selectin')

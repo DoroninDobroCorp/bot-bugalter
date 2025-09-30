@@ -536,7 +536,7 @@ async def pay_employee_salary(employee_id):
 async def delete_report_by_id(report_id):
 	report = await get_report_by_id(report_id)
 	if report:
-		await report.update(is_deleted=True)
+		await report.update(is_deleted=True, deleted_at=datetime.datetime.utcnow())
 		return True
 	return False
 

@@ -8,12 +8,12 @@
     {% if bookmakers %}
         <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {% for bookmaker in bookmakers %}
-                <a href="{{ url_for('bookmaker_detail', bookmaker_id=bookmaker.id) }}" class="group block bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                <div class="bookmaker-card group block bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer" data-url="{{ url_for('bookmaker_detail', bookmaker_id=bookmaker.id) }}">
                     <div class="p-5">
                         <div class="flex items-start justify-between">
-                            <div>
-                                <p class="text-base font-semibold text-gray-800 truncate">{{ bookmaker.bk_name }}</p>
-                                <p class="text-sm text-gray-500">{{ bookmaker.name }}</p>
+                            <div class="flex-1 min-w-0 mr-2">
+                                <p class="text-base font-semibold text-gray-800 break-words selectable">{{ bookmaker.bk_name }}</p>
+                                <p class="text-sm text-gray-500 selectable">{{ bookmaker.name }}</p>
                             </div>
                             <div class="ml-2 flex-shrink-0 flex items-center space-x-2">
                                 <span class="text-2xl">{{ bookmaker.country.flag }}</span>
@@ -26,7 +26,7 @@
                     <div class="bg-gray-50 group-hover:bg-gray-100 px-5 py-3 text-sm font-medium text-gray-600 text-center transition-colors duration-300">
                         Подтвердить отчеты &rarr;
                     </div>
-                </a>
+                </div>
             {% endfor %}
         </div>
     {% else %}
@@ -35,4 +35,63 @@
             <p>Нет профилей, ожидающих подтверждения.</p>
         </div>
     {% endif %}
+
+<style>
+.selectable {
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+    user-select: text !important;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.bookmaker-card');
+    
+    cards.forEach(card => {
+        let isSelecting = false;
+        let startX, startY;
+        
+        card.addEventListener('mousedown', function(e) {
+            isSelecting = false;
+            startX = e.clientX;
+            startY = e.clientY;
+        });
+        
+        card.addEventListener('touchstart', function(e) {
+            isSelecting = false;
+            startX = e.touches[0].clientX;
+            startY = e.touches[0].clientY;
+        });
+        
+        card.addEventListener('mousemove', function(e) {
+            if (startX !== undefined && startY !== undefined) {
+                const deltaX = Math.abs(e.clientX - startX);
+                const deltaY = Math.abs(e.clientY - startY);
+                if (deltaX > 5 || deltaY > 5) {
+                    isSelecting = true;
+                }
+            }
+        });
+        
+        card.addEventListener('touchmove', function(e) {
+            if (startX !== undefined && startY !== undefined) {
+                const deltaX = Math.abs(e.touches[0].clientX - startX);
+                const deltaY = Math.abs(e.touches[0].clientY - startY);
+                if (deltaX > 5 || deltaY > 5) {
+                    isSelecting = true;
+                }
+            }
+        });
+        
+        card.addEventListener('click', function(e) {
+            if (!isSelecting && window.getSelection().toString().length === 0) {
+                window.location.href = this.dataset.url;
+            }
+        });
+    });
+});
+</script>
+
 {% endblock %}

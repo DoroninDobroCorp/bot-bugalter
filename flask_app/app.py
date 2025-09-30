@@ -401,6 +401,7 @@ async def delete_report(report_id):
 		if not report:
 			abort(404)
 		report.is_deleted = True
+		report.deleted_at = dt.utcnow()
 		match_id = report.match_id
 		await session.commit()
 	return redirect(url_for('match_detail', match_id=match_id))

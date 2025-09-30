@@ -78,3 +78,6 @@ Traceback (most recent call last):
   File "/root/bot-bugalter/venv-ar/lib/python3.11/site-packages/sqlalchemy/sql/base.py", line 2178, in _entity_namespace_key
     raise exc.InvalidRequestError(
 sqlalchemy.exc.InvalidRequestError: Entity namespace for "report" has no property "from"
+Bot started!
+STARTUP: TOKEN_FP=684248...MazIFY
+STARTUP: GET_ME id=6842489166 username=ekjgufughufbot

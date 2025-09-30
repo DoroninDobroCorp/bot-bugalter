@@ -18,3 +18,550 @@ INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 13:20:46] "GET /bookmakers HTTP/1.1" 20
 INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 13:20:47] "[31m[1mGET /favicon.ico HTTP/1.1[0m" 401 -
 INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 13:20:48] "GET /bookmaker/468 HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 13:20:49] "[31m[1mGET /favicon.ico HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 14:45:34] "[32mGET /login?token=vrsinobusn&to=1 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 14:45:35] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 14:45:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 14:45:39] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 14:45:45] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 14:45:46] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 14:45:46] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 14:45:46] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 14:45:49] "POST /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 14:45:50] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 14:45:52] "POST /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 14:45:53] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 14:45:57] "POST /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 14:45:57] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 14:46:00] "POST /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 14:46:01] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 14:46:04] "POST /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 14:46:04] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 14:46:06] "POST /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 14:46:07] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 14:46:11] "POST /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 14:46:12] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 14:46:13] "POST /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 14:46:14] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 14:46:18] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 14:46:18] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 14:46:23] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 14:46:24] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 14:46:24] "GET /match/VqWZg4KMaR HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 14:46:24] "GET /match/VqWZg4KMaR HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 14:46:25] "GET /match/VqWZg4KMaR HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:22:15] "[32mGET /login?token=vrsinobusn&to=1 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:22:15] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:22:17] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:22:55] "POST /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:22:56] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:22:57] "GET /match/VqWZg4KMaR HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:22:57] "GET /match/VqWZg4KMaR HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:23:00] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:23:38] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:23:39] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:23:39] "GET /report/26476 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:23:40] "GET /report/26476 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:23:55] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:23:56] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:23:57] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:23:57] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:23:58] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:23:58] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:24:02] "POST /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:24:03] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:24:20] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:24:21] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:25:34] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:25:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:25:41] "GET /report/26476 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:26:00] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:26:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:26:03] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:26:12] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:26:14] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:27:02] "GET /report/26437 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:27:04] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:27:04] "GET /report/26437 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:27:05] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:27:05] "GET /match/VqWZg4KMaR HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:27:06] "GET /match/VqWZg4KMaR HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:27:42] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:27:43] "GET /match/dsS9J0DDNc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:27:43] "GET /match/dsS9J0DDNc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:37:52] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:37:54] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:39:54] "[31m[1mGET /reports HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:39:54] "[31m[1mGET /favicon.ico HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:47:33] "[32mGET /login?token=jxxteeupnc&to=1 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:47:33] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:47:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in '/root/bot-bugalter/flask_app/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 505-320-548
+INFO:werkzeug: * Detected change in '/root/bot-bugalter/flask_app/data/models.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 505-320-548
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:52:21] "[32mGET /login?token=oemyhlyamw&to=0 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:52:21] "[35m[1mGET /bookmakers HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/dialects/sqlite/aiosqlite.py", line 177, in execute
+    self._adapt_connection._handle_exception(error)
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/dialects/sqlite/aiosqlite.py", line 337, in _handle_exception
+    raise error
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/dialects/sqlite/aiosqlite.py", line 159, in execute
+    self.await_(_cursor.execute(operation, parameters))
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/aiosqlite/cursor.py", line 40, in execute
+    await self._execute(self._cursor.execute, sql, parameters)
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/aiosqlite/cursor.py", line 32, in _execute
+    return await self._conn._execute(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/aiosqlite/core.py", line 122, in _execute
+    return await future
+           ^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/aiosqlite/core.py", line 105, in run
+    result = function()
+             ^^^^^^^^^^
+sqlite3.OperationalError: no such column: report.deleted_at
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/root/bot-bugalter/flask_app/app.py", line 177, in bookmakers
+    bks = (await session.execute(stmt)).unique().scalars().all()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/ext/asyncio/session.py", line 463, in execute
+    result = await greenlet_spawn(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 201, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 309, in orm_execute_statement
+    return cls.orm_setup_cursor_result(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 616, in orm_setup_cursor_result
+    return loading.instances(result, querycontext)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/orm/loading.py", line 262, in instances
+    _prebuffered = list(chunks(None))
+                   ^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/orm/loading.py", line 247, in chunks
+    post_load.invoke(context, path)
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/orm/loading.py", line 1564, in invoke
+    loader(
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/orm/strategies.py", line 3338, in _load_for_path
+    self._load_via_parent(
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/orm/strategies.py", line 3414, in _load_via_parent
+    context.session.execute(
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1419, in execute
+    return meth(
+           ^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/dialects/sqlite/aiosqlite.py", line 177, in execute
+    self._adapt_connection._handle_exception(error)
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/dialects/sqlite/aiosqlite.py", line 337, in _handle_exception
+    raise error
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/dialects/sqlite/aiosqlite.py", line 159, in execute
+    self.await_(_cursor.execute(operation, parameters))
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/aiosqlite/cursor.py", line 40, in execute
+    await self._execute(self._cursor.execute, sql, parameters)
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/aiosqlite/cursor.py", line 32, in _execute
+    return await self._conn._execute(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/aiosqlite/core.py", line 122, in _execute
+    return await future
+           ^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/aiosqlite/core.py", line 105, in run
+    result = function()
+             ^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: report.deleted_at
+[SQL: SELECT report.bookmaker_id AS report_bookmaker_id, report.id AS report_id, report.date AS report_date, report.date_str AS report_date_str, report.msg_id AS report_msg_id, report.status AS report_status, report.source_id AS report_source_id, report.country_id AS report_country_id, report.match_id AS report_match_id, report.nickname AS report_nickname, report.bet_amount AS report_bet_amount, report.return_amount AS report_return_amount, report.coefficient AS report_coefficient, report._salary_percentage AS report__salary_percentage, report.is_employee_checked AS report_is_employee_checked, report.is_admin_checked AS report_is_admin_checked, report.is_error AS report_is_error, report.is_over AS report_is_over, report.is_express AS report_is_express, report.is_deleted AS report_is_deleted, report.deleted_at AS report_deleted_at 
+FROM report 
+WHERE report.bookmaker_id IN (?)]
+[parameters: (468,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:52:21] "GET /bookmakers?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:52:21] "GET /bookmakers?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:52:22] "GET /bookmakers?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:52:29] "[32mGET /login?token=oemyhlyamw&to=0 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:52:29] "[35m[1mGET /bookmakers HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/dialects/sqlite/aiosqlite.py", line 177, in execute
+    self._adapt_connection._handle_exception(error)
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/dialects/sqlite/aiosqlite.py", line 337, in _handle_exception
+    raise error
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/dialects/sqlite/aiosqlite.py", line 159, in execute
+    self.await_(_cursor.execute(operation, parameters))
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/aiosqlite/cursor.py", line 40, in execute
+    await self._execute(self._cursor.execute, sql, parameters)
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/aiosqlite/cursor.py", line 32, in _execute
+    return await self._conn._execute(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/aiosqlite/core.py", line 122, in _execute
+    return await future
+           ^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/aiosqlite/core.py", line 105, in run
+    result = function()
+             ^^^^^^^^^^
+sqlite3.OperationalError: no such column: report.deleted_at
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/root/bot-bugalter/flask_app/app.py", line 177, in bookmakers
+    bks = (await session.execute(stmt)).unique().scalars().all()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/ext/asyncio/session.py", line 463, in execute
+    result = await greenlet_spawn(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 201, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 309, in orm_execute_statement
+    return cls.orm_setup_cursor_result(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 616, in orm_setup_cursor_result
+    return loading.instances(result, querycontext)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/orm/loading.py", line 262, in instances
+    _prebuffered = list(chunks(None))
+                   ^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/orm/loading.py", line 247, in chunks
+    post_load.invoke(context, path)
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/orm/loading.py", line 1564, in invoke
+    loader(
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/orm/strategies.py", line 3338, in _load_for_path
+    self._load_via_parent(
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/orm/strategies.py", line 3414, in _load_via_parent
+    context.session.execute(
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1419, in execute
+    return meth(
+           ^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/dialects/sqlite/aiosqlite.py", line 177, in execute
+    self._adapt_connection._handle_exception(error)
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/dialects/sqlite/aiosqlite.py", line 337, in _handle_exception
+    raise error
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/dialects/sqlite/aiosqlite.py", line 159, in execute
+    self.await_(_cursor.execute(operation, parameters))
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/aiosqlite/cursor.py", line 40, in execute
+    await self._execute(self._cursor.execute, sql, parameters)
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/aiosqlite/cursor.py", line 32, in _execute
+    return await self._conn._execute(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/aiosqlite/core.py", line 122, in _execute
+    return await future
+           ^^^^^^^^^^^^
+  File "/root/bot-bugalter/flask_app/venv/lib/python3.12/site-packages/aiosqlite/core.py", line 105, in run
+    result = function()
+             ^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: report.deleted_at
+[SQL: SELECT report.bookmaker_id AS report_bookmaker_id, report.id AS report_id, report.date AS report_date, report.date_str AS report_date_str, report.msg_id AS report_msg_id, report.status AS report_status, report.source_id AS report_source_id, report.country_id AS report_country_id, report.match_id AS report_match_id, report.nickname AS report_nickname, report.bet_amount AS report_bet_amount, report.return_amount AS report_return_amount, report.coefficient AS report_coefficient, report._salary_percentage AS report__salary_percentage, report.is_employee_checked AS report_is_employee_checked, report.is_admin_checked AS report_is_admin_checked, report.is_error AS report_is_error, report.is_over AS report_is_over, report.is_express AS report_is_express, report.is_deleted AS report_is_deleted, report.deleted_at AS report_deleted_at 
+FROM report 
+WHERE report.bookmaker_id IN (?)]
+[parameters: (468,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:52:29] "GET /bookmakers?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:52:30] "GET /bookmakers?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+ * Serving Flask app 'app'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8180
+ * Running on http://185.200.177.127:8180
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 290-507-569
+ * Serving Flask app 'app'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8180
+ * Running on http://185.200.177.127:8180
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 290-507-569
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:58:41] "[31m[1mGET / HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 15:59:33] "[31m[1mGET / HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:04:23] "[32mGET /login?token=yuhpsjodud&to=1 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:04:24] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:04:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:06:45] "[32mGET /login?token=jxxteeupnc&to=1 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:06:46] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:06:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:06:50] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:06:57] "POST /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:07:01] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:07:05] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:07:07] "POST /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:07:11] "GET /report/26476 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:07:11] "GET /report/26476 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:07:12] "GET /report/26476 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:07:12] "GET /report/26476 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:15:34] "[32mGET /login?token=vrsinobusn&to=1 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:15:35] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:15:36] "[31m[1mGET /favicon.ico HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:15:56] "POST /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:15:56] "[31m[1mGET /favicon.ico HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:16:03] "POST /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:16:03] "[31m[1mGET /favicon.ico HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:16:04] "GET /match/ZRW5ITSi1o HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:16:04] "[31m[1mGET /favicon.ico HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:16:07] "[31m[1mGET /favicon.ico HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:16:09] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:16:10] "[31m[1mGET /favicon.ico HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:16:22] "GET /report/26476 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:16:22] "[31m[1mGET /favicon.ico HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:16:32] "[32mPOST /report/26476/confirm_edit HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:16:33] "GET /match/X1PiduN166 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:16:33] "[32mPOST /report/26476/confirm_edit HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:16:33] "GET /match/X1PiduN166 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:16:34] "[31m[1mGET /favicon.ico HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:16:36] "[31m[1mGET /favicon.ico HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:16:39] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:16:40] "[31m[1mGET /favicon.ico HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:17:04] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:17:05] "[31m[1mGET /favicon.ico HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:17:06] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:17:07] "[31m[1mGET /favicon.ico HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:17:11] "GET /match/VqWZg4KMaR HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:17:11] "[31m[1mGET /favicon.ico HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:17:22] "[31m[1mGET /favicon.ico HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:18:19] "GET /match/VqWZg4KMaR HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:18:59] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:21:29] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:21:31] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:21:31] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:21:32] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:21:32] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:21:33] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:21:34] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:21:35] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:21:38] "GET /report/26476 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:21:39] "GET /report/26476 HTTP/1.1" 200 -
+ * Serving Flask app 'app'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8180
+ * Running on http://185.200.177.127:8180
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 290-507-569
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:22:14] "[31m[1mGET /reports HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:22:25] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:22:26] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:22:27] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:22:28] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:22:29] "GET /match/VqWZg4KMaR HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:22:30] "GET /match/VqWZg4KMaR HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:23:25] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:23:26] "GET /match/VqWZg4KMaR HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:23:29] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:23:54] "[32mGET /login?token=vrsinobusn&to=1 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:23:54] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:23:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:23:58] "GET /match/VqWZg4KMaR HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:24:05] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:24:07] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:24:09] "GET /match/dsS9J0DDNc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:25:29] "GET /matches HTTP/1.1" 200 -
+ * Serving Flask app 'app'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8180
+ * Running on http://185.200.177.127:8180
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 290-507-569
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:25:38] "GET /match/dsS9J0DDNc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:25:47] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:25:52] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:26:13] "GET /match/VqWZg4KMaR HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:26:16] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:26:21] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:26:25] "GET /match/VqWZg4KMaR HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:26:35] "GET /match/VqWZg4KMaR HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:26:39] "GET /match/VqWZg4KMaR HTTP/1.1" 200 -
+ * Serving Flask app 'app'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8180
+ * Running on http://185.200.177.127:8180
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 290-507-569
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:27:03] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:27:05] "GET /match/VqWZg4KMaR HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:27:07] "GET /match/VqWZg4KMaR HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:27:18] "GET /match/VqWZg4KMaR HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:27:24] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:27:31] "GET /match/VqWZg4KMaR HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:28:47] "GET /match/VqWZg4KMaR HTTP/1.1" 200 -
+INFO:werkzeug:3.134.148.59 - - [30/Sep/2025 16:31:40] "[31m[1mGET / HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:31:42] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:31:44] "GET /match/VqWZg4KMaR HTTP/1.1" 200 -
+ * Serving Flask app 'app'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8180
+ * Running on http://185.200.177.127:8180
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 290-507-569
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:33:16] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:3.134.148.59 - - [30/Sep/2025 16:33:25] "[31m[1mGET / HTTP/1.1[0m" 401 -
+ERROR:werkzeug:3.134.148.59 - - [30/Sep/2025 16:35:20] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:3.134.148.59 - - [30/Sep/2025 16:35:20] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x19õðs¥An·rÅCQ\x96\x09¸ Ñ¨(ýv`^|Lé\x1dÆ\x8f¤¬ê\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+ERROR:werkzeug:3.134.148.59 - - [30/Sep/2025 16:37:05] code 400, message Bad request syntax ('SSH-2.0-Go')
+INFO:werkzeug:3.134.148.59 - - [30/Sep/2025 16:37:05] "[31m[1mSSH-2.0-Go[0m" 400 -

@@ -36,36 +36,44 @@
     {% if matches %}
         <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {% for match in matches %}
-                <a href="{{ url_for('match_detail', match_id=match.id) }}" class="group block bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                <div class="match-card group block bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer" data-url="{{ url_for('match_detail', match_id=match.id) }}">
                     <div class="p-5">
-                        <div class="flex items-center justify-between">
-                            <p class="text-sm font-medium text-accent truncate">{{ match.name }}</p>
-                            <div class="ml-2 flex-shrink-0 flex">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex-1 min-w-0 mr-3">
+                                {% if match.name %}
+                                <p class="text-base font-semibold text-gray-800 break-words selectable">{{ match.name }}</p>
+                                {% else %}
+                                <p class="text-base font-semibold text-gray-400 break-words italic selectable">Без названия</p>
+                                {% endif %}
+                                <p class="text-xs text-gray-400 mt-0.5 font-mono selectable">{{ match.id }}</p>
+                            </div>
+                            <div class="flex-shrink-0">
                                 <p class="inline-flex items-center rounded-full bg-red-100 px-2.5 py-0.5 text-sm font-semibold text-danger">
                                     {{ match.unchecked_reports|length }}
                                 </p>
                             </div>
                         </div>
-                        <div class="mt-2 sm:flex sm:justify-between">
-                            <div class="sm:flex">
-                                <p class="flex items-center text-sm text-gray-500">
-                                    {% if match.date_min and match.date_max %}
-                                        {% if match.date_min.date() == match.date_max.date() %}
-                                            {{ match.date_min.strftime('%d.%m.%Y') }}
-                                        {% else %}
-                                            {{ match.date_min.strftime('%d.%m') }} - {{ match.date_max.strftime('%d.%m.%Y') }}
-                                        {% endif %}
+                        <div class="mt-3 pt-3 border-t border-gray-100">
+                            <div class="flex items-center text-sm text-gray-500 selectable">
+                                <svg class="mr-1.5 h-4 w-4 flex-shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                                {% if match.date_min and match.date_max %}
+                                    {% if match.date_min.date() == match.date_max.date() %}
+                                        {{ match.date_min.strftime('%d.%m.%Y') }}
                                     {% else %}
-                                        Ожидают проверки
+                                        {{ match.date_min.strftime('%d.%m') }} - {{ match.date_max.strftime('%d.%m.%Y') }}
                                     {% endif %}
-                                </p>
+                                {% else %}
+                                    Ожидают проверки
+                                {% endif %}
                             </div>
                         </div>
                     </div>
                     <div class="bg-gray-50 group-hover:bg-gray-100 px-5 py-3 text-sm font-medium text-gray-600 text-center transition-colors duration-300">
                         Перейти к проверке &rarr;
                     </div>
-                </a>
+                </div>
             {% endfor %}
         </ul>
     {% elif search_performed %}
@@ -79,4 +87,63 @@
             <p>Нет матчей с непроверенными отчетами.</p>
         </div>
     {% endif %}
+
+<style>
+.selectable {
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+    user-select: text !important;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.match-card');
+    
+    cards.forEach(card => {
+        let isSelecting = false;
+        let startX, startY;
+        
+        card.addEventListener('mousedown', function(e) {
+            isSelecting = false;
+            startX = e.clientX;
+            startY = e.clientY;
+        });
+        
+        card.addEventListener('touchstart', function(e) {
+            isSelecting = false;
+            startX = e.touches[0].clientX;
+            startY = e.touches[0].clientY;
+        });
+        
+        card.addEventListener('mousemove', function(e) {
+            if (startX !== undefined && startY !== undefined) {
+                const deltaX = Math.abs(e.clientX - startX);
+                const deltaY = Math.abs(e.clientY - startY);
+                if (deltaX > 5 || deltaY > 5) {
+                    isSelecting = true;
+                }
+            }
+        });
+        
+        card.addEventListener('touchmove', function(e) {
+            if (startX !== undefined && startY !== undefined) {
+                const deltaX = Math.abs(e.touches[0].clientX - startX);
+                const deltaY = Math.abs(e.touches[0].clientY - startY);
+                if (deltaX > 5 || deltaY > 5) {
+                    isSelecting = true;
+                }
+            }
+        });
+        
+        card.addEventListener('click', function(e) {
+            if (!isSelecting && window.getSelection().toString().length === 0) {
+                window.location.href = this.dataset.url;
+            }
+        });
+    });
+});
+</script>
+
 {% endblock %}

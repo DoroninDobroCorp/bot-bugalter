@@ -31,15 +31,15 @@
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-6">
                         <div class="sm:col-span-2">
                             <dt class="text-sm font-medium text-gray-500">Матч</dt>
-                            <dd class="mt-1 text-sm text-gray-900 truncate" title="{{ report.match.name }}">{{ report.match.name }}</dd>
+                            <dd class="mt-1 text-sm text-gray-900 break-words selectable" title="{{ report.match.name }}">{{ report.match.name }}</dd>
                         </div>
                         <div>
                             <dt class="text-sm font-medium text-gray-500">Никнейм</dt>
-                            <dd class="mt-1 text-sm text-gray-900">{{ report.nickname }}</dd>
+                            <dd class="mt-1 text-sm text-gray-900 selectable">{{ report.nickname }}</dd>
                         </div>
                         <div>
                             <dt class="text-sm font-medium text-gray-500">Ставка / Коэф.</dt>
-                            <dd class="mt-1 text-sm text-gray-900 font-semibold">{{ report.bet_amount }} / {{ report.coefficient }}</dd>
+                            <dd class="mt-1 text-sm text-gray-900 font-semibold selectable">{{ report.bet_amount }} / {{ report.coefficient }}</dd>
                         </div>
                     </div>
                     
@@ -90,4 +90,14 @@
             <p>Все отчеты, назначенные вам, уже подтверждены.</p>
         </div>
     {% endif %}
+
+<style>
+.selectable {
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+    user-select: text !important;
+}
+</style>
+
 {% endblock %}
