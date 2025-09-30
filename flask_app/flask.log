@@ -565,3 +565,14 @@ ERROR:werkzeug:3.134.148.59 - - [30/Sep/2025 16:35:20] code 400, message Bad req
 INFO:werkzeug:3.134.148.59 - - [30/Sep/2025 16:35:20] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x19õðs¥An·rÅCQ\x96\x09¸ Ñ¨(ýv`^|Lé\x1dÆ\x8f¤¬ê\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
 ERROR:werkzeug:3.134.148.59 - - [30/Sep/2025 16:37:05] code 400, message Bad request syntax ('SSH-2.0-Go')
 INFO:werkzeug:3.134.148.59 - - [30/Sep/2025 16:37:05] "[31m[1mSSH-2.0-Go[0m" 400 -
+ERROR:werkzeug:3.134.148.59 - - [30/Sep/2025 16:39:00] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:3.134.148.59 - - [30/Sep/2025 16:39:00] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03t9\x1f\x89\\\x8fÑaµ^{xÍe¡\x15*\x88û\x9aìÄ|Ê\x96|\x9d<ïy¬Ø\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:39:17] "[32mGET /login?token=vrsinobusn&to=1 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:39:18] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:39:40] "POST /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:39:42] "GET /match/ZRW5ITSi1o HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:39:47] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:39:56] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:40:02] "GET /bookmaker/380 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:40:18] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 16:40:20] "GET /matches HTTP/1.1" 200 -

@@ -8,3 +8,12 @@ set_ids_topic called: chat_id=-1002969517449, thread_id=62, chat_type=supergroup
 Topic set: chat -1002969517449 -> thread 62
 set_ids_topic called: chat_id=-1002949289864, thread_id=None, chat_type=supergroup, is_forum=None
 Bot started! (match-ids-bot)
+set_ids_topic called: chat_id=-1002949289864, thread_id=None, chat_type=supergroup, is_forum=None
+set_ids_topic called: chat_id=-1002010985531, thread_id=None, chat_type=supergroup, is_forum=True
+General topic detected: chat -1002010985531 -> thread 1
+Failed to send to topic 1: Telegram server says - Bad Request: message thread not found
+Failed to send to topic 1: Telegram server says - Bad Request: message thread not found
+set_ids_topic called: chat_id=-1002010985531, thread_id=None, chat_type=supergroup, is_forum=True
+General topic detected: chat -1002010985531 -> thread 1
+Failed to send to topic 1: Telegram server says - Bad Request: message thread not found
+Bot started! (match-ids-bot)

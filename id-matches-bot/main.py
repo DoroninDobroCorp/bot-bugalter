@@ -16,10 +16,28 @@ dp = Dispatcher()
 CHATS: list = []
 CHATS_FILE = Path(__file__).resolve().parent / "chats.json"
 TOPICS_FILE = Path(__file__).resolve().parent / "topics.json"
+BLOCKED_TOPICS_FILE = Path(__file__).resolve().parent / "blocked_topics.json"
 TOPICS: dict[str, int] = {}
+BLOCKED_TOPICS: dict[str, list] = {}
 
 
 # FUNCS
+def is_topic_blocked(msg: types.Message):
+    """Check if current topic is blocked from bot activity."""
+    global BLOCKED_TOPICS
+    chat_key = str(msg.chat.id)
+    thread_id = msg.message_thread_id
+    
+    # If no thread_id, it's not from a topic - allow
+    if thread_id is None:
+        return False
+    
+    # Check if this topic is in blocked list
+    if chat_key in BLOCKED_TOPICS:
+        return thread_id in BLOCKED_TOPICS[chat_key]
+    
+    return False
+
 def is_chat_enabled(msg: types.Message):
     global CHATS
     # Consider chat enabled if its chat_id is present in chats.json, regardless of thread/topic
@@ -149,6 +167,69 @@ async def unset_ids_topic(msg: types.Message):
         await msg.answer("ℹ️ Для этого чата топик не был установлен.")
 
 
+@dp.message(Command("block_topic"))
+async def block_topic(msg: types.Message):
+    """Block bot activity in current topic."""
+    global BLOCKED_TOPICS
+    chat_key = str(msg.chat.id)
+    thread_id = msg.message_thread_id
+    
+    if thread_id is None:
+        await msg.answer("❌ Эта команда должна быть вызвана из топика/ветки, которую вы хотите заблокировать.")
+        return
+    
+    # Load existing blocked topics
+    if BLOCKED_TOPICS_FILE.exists():
+        try:
+            BLOCKED_TOPICS = json.loads(BLOCKED_TOPICS_FILE.read_text(encoding='utf-8'))
+        except Exception:
+            BLOCKED_TOPICS = {}
+    
+    # Add this topic to blocked list
+    if chat_key not in BLOCKED_TOPICS:
+        BLOCKED_TOPICS[chat_key] = []
+    
+    if thread_id in BLOCKED_TOPICS[chat_key]:
+        await msg.answer(f"ℹ️ Этот топик (ID: {thread_id}) уже заблокирован.")
+        return
+    
+    BLOCKED_TOPICS[chat_key].append(thread_id)
+    BLOCKED_TOPICS_FILE.write_text(json.dumps(BLOCKED_TOPICS), encoding='utf-8')
+    
+    print(f"Topic blocked: chat {chat_key}, thread {thread_id}")
+    await msg.answer(f"🚫 Топик заблокирован! Бот больше не будет реагировать на сообщения в этой ветке (ID: {thread_id}).")
+
+
+@dp.message(Command("unblock_topic"))
+async def unblock_topic(msg: types.Message):
+    """Unblock bot activity in current topic."""
+    global BLOCKED_TOPICS
+    chat_key = str(msg.chat.id)
+    thread_id = msg.message_thread_id
+    
+    if thread_id is None:
+        await msg.answer("❌ Эта команда должна быть вызвана из топика/ветки, которую вы хотите разблокировать.")
+        return
+    
+    # Load existing blocked topics
+    if BLOCKED_TOPICS_FILE.exists():
+        try:
+            BLOCKED_TOPICS = json.loads(BLOCKED_TOPICS_FILE.read_text(encoding='utf-8'))
+        except Exception:
+            BLOCKED_TOPICS = {}
+    
+    # Remove this topic from blocked list
+    if chat_key in BLOCKED_TOPICS and thread_id in BLOCKED_TOPICS[chat_key]:
+        BLOCKED_TOPICS[chat_key].remove(thread_id)
+        if not BLOCKED_TOPICS[chat_key]:  # If list is empty, remove chat key
+            BLOCKED_TOPICS.pop(chat_key)
+        BLOCKED_TOPICS_FILE.write_text(json.dumps(BLOCKED_TOPICS), encoding='utf-8')
+        print(f"Topic unblocked: chat {chat_key}, thread {thread_id}")
+        await msg.answer(f"✅ Топик разблокирован! Бот снова будет реагировать на сообщения в этой ветке (ID: {thread_id}).")
+    else:
+        await msg.answer(f"ℹ️ Этот топик (ID: {thread_id}) не был заблокирован.")
+
+
 @dp.message(Command("show_ids_config"))
 async def show_ids_config(msg: types.Message):
     """Show current topic configuration for this chat."""
@@ -160,6 +241,14 @@ async def show_ids_config(msg: types.Message):
             TOPICS = json.loads(TOPICS_FILE.read_text(encoding='utf-8'))
         except Exception:
             TOPICS = {}
+    
+    # Load blocked topics
+    global BLOCKED_TOPICS
+    if BLOCKED_TOPICS_FILE.exists():
+        try:
+            BLOCKED_TOPICS = json.loads(BLOCKED_TOPICS_FILE.read_text(encoding='utf-8'))
+        except Exception:
+            BLOCKED_TOPICS = {}
     
     response = f"📋 **Конфигурация для чата {chat_key}**\n\n"
     
@@ -175,9 +264,17 @@ async def show_ids_config(msg: types.Message):
     else:
         response += "📌 Топик не установлен (коды отправляются в ответ на сообщение)\n"
     
+    # Show blocked topics
+    if chat_key in BLOCKED_TOPICS and BLOCKED_TOPICS[chat_key]:
+        response += f"\n🚫 Заблокированные топики: {', '.join(map(str, BLOCKED_TOPICS[chat_key]))}\n"
+    else:
+        response += "\n🚫 Заблокированных топиков нет\n"
+    
     # Current message info
     if msg.message_thread_id:
         response += f"\n🔹 Текущая ветка: {msg.message_thread_id}"
+        if is_topic_blocked(msg):
+            response += " (ЗАБЛОКИРОВАН)"
     else:
         response += "\n🔹 Текущее сообщение из основного чата (не из ветки)"
     
@@ -237,6 +334,10 @@ async def add_match_id(msg: types.Message):
 async def photo_handler(msg: types.Message):
     if not is_chat_enabled(msg):
         return
+    
+    # Check if current topic is blocked
+    if is_topic_blocked(msg):
+        return
 
     match_id = await generate()
 
@@ -251,6 +352,10 @@ async def photo_handler(msg: types.Message):
 @dp.message(F.text.is_not(None))
 async def text_handler(msg: types.Message):
     if not is_chat_enabled(msg):
+        return
+    
+    # Check if current topic is blocked
+    if is_topic_blocked(msg):
         return
 
     if msg.text.lower() not in ["лайв", "прематч"]:
@@ -278,6 +383,14 @@ async def main():
 			TOPICS = json.loads(TOPICS_FILE.read_text(encoding='utf-8'))
 		except Exception:
 			TOPICS = {}
+	
+	# Load blocked topics (if exists)
+	global BLOCKED_TOPICS
+	if BLOCKED_TOPICS_FILE.exists():
+		try:
+			BLOCKED_TOPICS = json.loads(BLOCKED_TOPICS_FILE.read_text(encoding='utf-8'))
+		except Exception:
+			BLOCKED_TOPICS = {}
 
 	print("Bot started! (match-ids-bot)")
 	await dp.start_polling(bot)
