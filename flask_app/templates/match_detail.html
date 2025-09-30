@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block title %}Матч: {{ match.name }}{% endblock %}
+{% block header %}Детали матча{% endblock %}
+{% block mobile_header %}{{ match.name }}{% endblock %}
+
+
+{% block content %}
+<p class="text-lg font-medium text-gray-600 -mt-6 mb-6 hidden md:block">{{ match.name }}</p>
+
+{% if reports %}
+    <!-- Кнопка "Пометить все" сверху для удобства -->
+    <div class="flex justify-end mb-6">
+        <form action="{{ url_for('mark_all_checked', match_id=match.id) }}" method="post">
+            <button type="submit" class="rounded-md bg-success px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700 transition-colors">
+                Пометить все проверенными
+            </button>
+        </form>
+    </div>
+
+    <div class="space-y-5">
+        {% for report in reports %}
+        <div class="bg-white rounded-lg shadow-md transition-all duration-300 overflow-hidden">
+            <div class="p-5">
+                <!-- Основная информация -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-6">
+                    <div>
+                        <dt class="text-sm font-medium text-gray-500">Дата</dt>
+                        <dd class="mt-1 text-sm text-gray-900">{{ report.date.strftime('%d.%m.%y %H:%M') }}</dd>
+                    </div>
+                    <div>
+                        <dt class="text-sm font-medium text-gray-500">Источник</dt>
+                        <dd class="mt-1 text-sm text-gray-900 truncate">{{ report.source.name if report.source else '-' }}</dd>
+                    </div>
+                    <div>
+                        <dt class="text-sm font-medium text-gray-500">Страна</dt>
+                        <dd class="mt-1 text-sm text-gray-900 truncate">{{ report.country.name if report.country else '-' }}</dd>
+                    </div>
+                    <div>
+                        <dt class="text-sm font-medium text-gray-500">Букмекер</dt>
+                        <dd class="mt-1 text-sm text-gray-900 truncate">{{ report.bookmaker.bk_name if report.bookmaker else '-' }}</dd>
+                    </div>
+                    <div>
+                        <dt class="text-sm font-medium text-gray-500">Профиль</dt>
+                        <dd class="mt-1 text-sm text-gray-900 truncate">{{ report.bookmaker.name if report.bookmaker else '-' }}</dd>
+                    </div>
+                    <div>
+                        <dt class="text-sm font-medium text-gray-500">Ставка / Коэф.</dt>
+                        <dd class="mt-1 text-sm text-gray-900">{{ report.bet_amount }} / {{ report.coefficient }}</dd>
+                    </div>
+                    <div>
+                        <dt class="text-sm font-medium text-gray-500">Профит</dt>
+                        <dd class="mt-1 text-md font-semibold {% if report.profit > 0 %}text-success{% elif report.profit < 0 %}text-danger{% else %}text-gray-700{% endif %}">
+                             {{ "%.2f"|format(report.profit) }}
+                        </dd>
+                    </div>
+                    <div class="col-span-2 md:col-span-1">
+                        <dt class="text-sm font-medium text-gray-500">Сотрудники</dt>
+                        <dd class="mt-1 text-sm text-gray-900">
+                            {% for employee in report.employees %}{{ employee.second_name }}{% if not loop.last %}, {% endif %}{% endfor %}
+                        </dd>
+                    </div>
+                    <div class="col-span-2 md:col-span-4 self-center">
+                        {% if report.is_error or report.is_over %}
+                        <div class="flex space-x-2">
+                           {% if report.is_error %}<span class="inline-flex items-center rounded-md bg-red-100 px-2 py-1 text-xs font-medium text-danger ring-1 ring-inset ring-red-200">Ошибка</span>{% endif %}
+                           {% if report.is_over %}<span class="inline-flex items-center rounded-md bg-yellow-100 px-2 py-1 text-xs font-medium text-warning ring-1 ring-inset ring-yellow-200">Перебор</span>{% endif %}
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Действия -->
+            <div class="bg-gray-50 px-5 py-3 flex items-center justify-end space-x-3">
+                <form action="{{ url_for('mark_single_checked', report_id=report.id) }}" method="post" class="inline">
+                    <button type="submit" class="rounded-md bg-success px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700 transition-colors">
+                        Подтвердить
+                    </button>
+                </form>
+                <a href="{{ url_for('edit_report', report_id=report.id) }}" class="rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 transition-colors">
+                    Редактировать
+                </a>
+                <form action="{{ url_for('delete_report', report_id=report.id) }}" method="post" onsubmit="return confirm('Вы уверены, что хотите удалить этот отчёт?');" class="inline">
+                    <button type="submit" class="rounded-md bg-danger px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-700 transition-colors">
+                        Удалить
+                    </button>
+                </form>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+{% else %}
+    <div class="bg-blue-100 border-l-4 border-blue-500 text-blue-800 p-4 rounded-md" role="alert">
+        <p class="font-bold">Нет отчетов для этого матча.</p>
+    </div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block title %}Отчёты по дате{% endblock %}
+{% block header %}Отчёты по дате{% endblock %}
+{% block mobile_header %}Отчёты по дате{% endblock %}
+
+{% block content %}
+
+<!-- Форма поиска -->
+<div class="bg-white rounded-lg shadow-md p-6 mb-8">
+    <form method="post" class="sm:flex sm:items-end sm:space-x-4 space-y-4 sm:space-y-0">
+        <div class="flex-grow">
+            <label for="report_date" class="block text-sm font-medium leading-6 text-gray-900">Выберите дату</label>
+            <div class="mt-2">
+                <input type="date" name="report_date" id="report_date" class="block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-accent sm:text-sm sm:leading-6 transition" value="{{ selected_date }}">
+            </div>
+        </div>
+        <div>
+            <button type="submit" class="w-full sm:w-auto rounded-md bg-accent px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-accent-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent transition-colors">
+                Найти отчёты
+            </button>
+        </div>
+    </form>
+</div>
+
+<!-- Результаты поиска -->
+<div class="space-y-5">
+    {% if reports %}
+        <h2 class="text-xl font-semibold text-gray-800 px-1">Найденные отчёты ({{ reports|length }})</h2>
+        {% for report in reports %}
+        <a href="{{ url_for('edit_report', report_id=report.id) }}" class="block bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+            <div class="p-5">
+                <!-- Верхняя часть -->
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start">
+                    <div>
+                        <p class="text-base font-semibold text-gray-800 truncate" title="{{ report.match.name if report.match else '' }}">{{ report.match.name if report.match else '' }}</p>
+                        <p class="text-sm text-gray-500">{{ report.bookmaker.name if report.bookmaker else '' }}</p>
+                    </div>
+                    <p class="mt-2 sm:mt-0 text-sm font-medium text-gray-500 flex-shrink-0">
+                       {{ report.date.strftime('%d.%m.%Y в %H:%M') if report.date else '' }}
+                    </p>
+                </div>
+
+                <!-- Разделитель -->
+                <div class="my-4 border-t border-gray-200"></div>
+
+                <!-- Нижняя часть -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+                    <div>
+                        <p class="text-gray-500">Ставка</p>
+                        <p class="font-medium text-gray-900">{{ report.bet_amount }}</p>
+                    </div>
+                    <div>
+                        <p class="text-gray-500">Профит</p>
+                        <p class="font-semibold text-lg {% if report.profit > 0 %}text-success{% elif report.profit < 0 %}text-danger{% else %}text-gray-800{% endif %}">
+                            {{ "%.2f"|format(report.profit) }}
+                        </p>
+                    </div>
+                    <div class="col-span-2">
+                        <p class="text-gray-500">Сотрудники</p>
+                        <p class="font-medium text-gray-900 truncate">
+                            {% for employee in report.employees %}{{ employee.second_name }}{% if not loop.last %}, {% endif %}{% endfor %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    {% elif search_performed %}
+         <div class="bg-blue-100 border-l-4 border-blue-500 text-blue-800 p-4 rounded-md" role="alert">
+            <p class="font-bold">Отчёты не найдены</p>
+            <p>За {{ selected_date }} нет ни одного отчёта.</p>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Неверный токен{% endblock %}
+{% block header %}Неверный токен{% endblock %}
+{% block mobile_header %}Неверный токен{% endblock %}
+
+{% block content %}
+<div class="bg-red-100 border-l-4 border-danger text-red-800 p-6 rounded-md shadow-sm" role="alert">
+    <h3 class="font-bold text-lg">Неверный токен доступа</h3>
+    <p class="mt-2">Предоставленный токен недействителен. Пожалуйста, сгенерируйте новый в Telegram-боте и перейдите по ссылке еще раз.</p>
+    {% if token %}
+        <p class="mt-4 text-xs text-red-600 bg-red-200 inline-block px-2 py-1 rounded">Ваш токен: {{ token }}</p>
+    {% endif %}
+</div>
+{% endblock %}

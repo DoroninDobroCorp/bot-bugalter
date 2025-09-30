@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ bookmaker.bk_name }}{% endblock %}
+
+{% block header %}
+    <div class="flex items-center space-x-4">
+        <span class="text-4xl">{{ bookmaker.country.flag }}</span>
+        <div>
+            <h1 class="text-2xl font-bold tracking-tight text-gray-900">{{ bookmaker.bk_name }}</h1>
+            <p class="text-sm font-medium text-gray-500">{{ bookmaker.name }}</p>
+        </div>
+    </div>
+{% endblock %}
+{% block mobile_header %}{{ bookmaker.bk_name }}{% endblock %}
+
+{% block content %}
+    {% if reports %}
+        <div class="space-y-5">
+            {% for report in reports %}
+            <!-- Alpine.js для управления состоянием каждой карточки -->
+            <div x-data="{ result: 'win', returnAmount: '{{ report.return_amount }}' }" 
+                 :class="{
+                    'border-success bg-green-50': result === 'win',
+                    'border-danger bg-red-50': result === 'lose',
+                    'border-warning bg-yellow-50': result === 'return'
+                 }"
+                 class="bg-white rounded-lg shadow-md transition-colors duration-300 border-l-4">
+                
+                <form action="{{ url_for('confirm_report_coef', report_id=report.id) }}" method="post" class="p-5">
+                    <!-- Информация об отчете -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-6">
+                        <div class="sm:col-span-2">
+                            <dt class="text-sm font-medium text-gray-500">Матч</dt>
+                            <dd class="mt-1 text-sm text-gray-900 truncate" title="{{ report.match.name }}">{{ report.match.name }}</dd>
+                        </div>
+                        <div>
+                            <dt class="text-sm font-medium text-gray-500">Никнейм</dt>
+                            <dd class="mt-1 text-sm text-gray-900">{{ report.nickname }}</dd>
+                        </div>
+                        <div>
+                            <dt class="text-sm font-medium text-gray-500">Ставка / Коэф.</dt>
+                            <dd class="mt-1 text-sm text-gray-900 font-semibold">{{ report.bet_amount }} / {{ report.coefficient }}</dd>
+                        </div>
+                    </div>
+                    
+                    <!-- Форма управления -->
+                    <div class="mt-6 pt-5 border-t border-gray-200 grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
+                         <div>
+                            <label for="result_{{ report.id }}" class="block text-sm font-medium leading-6 text-gray-900">Результат</label>
+                            <select x-model="result" id="result_{{ report.id }}" name="report_result" class="mt-2 block w-full rounded-md border-0 py-2 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-accent sm:text-sm sm:leading-6 transition">
+                                <option value="win">Заход</option>
+                                <option value="lose">Не заход</option>
+                                <option value="return">Возврат</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="return_amount_input_{{ report.id }}" class="block text-sm font-medium leading-6 text-gray-900">Сумма возврата</label>
+                            <div class="mt-2 relative">
+                                <!-- Поле для ввода суммы возврата, видимо только при выборе "Возврат" -->
+                                <input x-show="result === 'return'" type="text" name="return_amount" id="return_amount_input_{{ report.id }}" x-model="returnAmount" class="block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-accent sm:text-sm sm:leading-6 transition">
+                                
+                                <!-- Поле для отображения рассчитанной суммы выигрыша/проигрыша -->
+                                <div x-show="result === 'win'" class="block w-full rounded-md bg-gray-100 px-3 py-2 text-gray-700 sm:text-sm">
+                                    {{ "%.2f"|format(report.coefficient * report.bet_amount) }}
+                                </div>
+                                <div x-show="result === 'lose'" class="block w-full rounded-md bg-gray-100 px-3 py-2 text-gray-700 sm:text-sm">
+                                    0.00
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex md:justify-end">
+                             <button type="submit" 
+                                     :class="{
+                                        'bg-success hover:bg-green-600': result === 'win',
+                                        'bg-danger hover:bg-red-600': result === 'lose',
+                                        'bg-warning hover:bg-yellow-600': result === 'return'
+                                     }"
+                                     class="w-full sm:w-auto rounded-md px-4 py-2 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition-colors">
+                                Подтвердить
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="bg-blue-100 border-l-4 border-blue-500 text-blue-800 p-4 rounded-md" role="alert">
+            <p class="font-bold">Нет отчетов для этого профиля.</p>
+            <p>Все отчеты, назначенные вам, уже подтверждены.</p>
+        </div>
+    {% endif %}
+{% endblock %}

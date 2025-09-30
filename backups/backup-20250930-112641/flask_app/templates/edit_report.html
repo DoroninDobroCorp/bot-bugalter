@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block title %}Отчёт {{ report.id }}{% endblock %}
+{% block header %}Редактирование отчёта #{{ report.id }}{% endblock %}
+{% block mobile_header %}Отчёт #{{ report.id }}{% endblock %}
+
+{% block content %}
+<div class="bg-white rounded-lg shadow-md">
+    <form id="submit" action="{{ url_for('confirm_report_edit', report_id=report.id) }}" method="post">
+        <input type="hidden" name="country" value="{{ report.country_id }}">
+        <input type="hidden" name="bookmaker" value="{{ report.bookmaker_id }}">
+
+        <div class="p-6 space-y-8">
+            {% if error %}
+            <div class="bg-red-100 border-l-4 border-danger text-red-800 p-4 rounded-md" role="alert">
+                <p class="font-bold">Ошибка: {{ error }}</p>
+            </div>
+            {% endif %}
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">
+                <!-- Используем единый стиль для всех инпутов -->
+                {% macro form_input(name, label, value, type='text') %}
+                <div>
+                    <label for="{{ name }}" class="block text-sm font-medium leading-6 text-gray-900">{{ label }}</label>
+                    <div class="mt-2">
+                        <input type="{{ type }}" name="{{ name }}" id="{{ name }}" class="block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-accent sm:text-sm sm:leading-6 transition" value="{{ value }}">
+                    </div>
+                </div>
+                {% endmacro %}
+
+                {% macro form_select(name, label, selected_id, selected_name, options, key='id', val='name') %}
+                <div>
+                    <label for="{{ name }}" class="block text-sm font-medium leading-6 text-gray-900">{{ label }}</label>
+                     <div class="mt-2">
+                        <select name="{{ name }}" id="{{ name }}" class="block w-full rounded-md border-0 py-2 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-accent sm:text-sm sm:leading-6 transition">
+                            <option value="{{ selected_id }}" selected>{{ selected_name }}</option>
+                            {% for option in options %}{% if option[key] != selected_id %}<option value="{{ option[key] }}">{{ option[val] }}</option>{% endif %}{% endfor %}
+                        </select>
+                    </div>
+                </div>
+                {% endmacro %}
+                
+                {{ form_input('date', 'Дата (YYYY-MM-DD HH:MM:SS)', report.date) }}
+                {{ form_select('source', 'Источник', report.source.id, report.source.name, sources) }}
+                
+                <div class="md:col-span-2">
+                    <label for="match" class="block text-sm font-medium leading-6 text-gray-900">Матч</label>
+                    <div class="mt-2">
+                        <select name="match" id="match" class="block w-full rounded-md border-0 py-2 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-accent sm:text-sm sm:leading-6 transition">
+                            <option value="{{ report.canonical_match.id }}" selected>{{ report.canonical_match.name }} (текущий)</option>
+                            {% for match in matches %}{% if match.id != report.canonical_match.id %}<option value="{{ match.id }}">{{ match.name }}</option>{% endif %}{% endfor %}
+                        </select>
+                    </div>
+                </div>
+
+                {{ form_input('coefficient', 'Коэффициент', report.coefficient) }}
+                {{ form_input('stake', 'Проставлено', report.bet_amount) }}
+                {{ form_input('refund', 'Возврат', report.return_amount) }}
+                {{ form_input('employees', 'Сотрудники (через запятую)', employees) }}
+            </div>
+            
+            <fieldset>
+              <div class="space-y-5">
+                {% macro checkbox(name, label, checked) %}
+                <div class="relative flex items-start">
+                  <div class="flex h-6 items-center">
+                    <input id="{{ name }}" name="{{ name }}" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-accent focus:ring-accent transition" {% if checked %}checked{% endif %}>
+                  </div>
+                  <div class="ml-3 text-sm leading-6">
+                    <label for="{{ name }}" class="font-medium text-gray-900">{{ label }}</label>
+                  </div>
+                </div>
+                {% endmacro %}
+                {{ checkbox('error', 'Ошибка', report.is_error) }}
+                {{ checkbox('over', 'Перебор', report.is_over) }}
+              </div>
+            </fieldset>
+        </div>
+        
+        <div class="bg-gray-50 px-6 py-4 flex justify-end rounded-b-lg">
+            <button type="submit" class="rounded-md bg-accent px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-accent-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent transition-colors">
+                Сохранить изменения
+            </button>
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,80 @@
+Bot started!
+STARTUP: TOKEN_FP=684248...MazIFY
+STARTUP: GET_ME id=6842489166 username=ekjgufughufbot
+session scope error: Entity namespace for "report" has no property "from"
+Cause exception while process update id=722185267 by bot id=6842489166
+InvalidRequestError: Entity namespace for "report" has no property "from"
+Traceback (most recent call last):
+  File "/root/bot-bugalter/venv-ar/lib/python3.11/site-packages/sqlalchemy/sql/base.py", line 2176, in _entity_namespace_key
+    return getattr(ns, key)  # type: ignore
+           ^^^^^^^^^^^^^^^^
+AttributeError: type object 'Report' has no attribute 'from'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/bot-bugalter/venv-ar/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/venv-ar/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/venv-ar/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/venv-ar/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/venv-ar/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/venv-ar/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/venv-ar/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/venv-ar/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/venv-ar/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/venv-ar/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/venv-ar/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/venv-ar/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/venv-ar/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/venv-ar/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/venv-ar/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/venv-ar/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/auto-reports-bot/routers/tables.py", line 41, in send_tables
+    await gather_tables([f.strip() for f in filters])
+  File "/root/bot-bugalter/auto-reports-bot/modules/utils.py", line 154, in gather_tables
+    filtered_reports = await Report.filter_by(**filters)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/auto-reports-bot/modules/base.py", line 34, in filter_by
+    q = select(cls).filter_by(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/venv-ar/lib/python3.11/site-packages/sqlalchemy/sql/selectable.py", line 5194, in filter_by
+    clauses = [
+              ^
+  File "/root/bot-bugalter/venv-ar/lib/python3.11/site-packages/sqlalchemy/sql/selectable.py", line 5195, in <listcomp>
+    _entity_namespace_key(from_entity, key) == value
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot-bugalter/venv-ar/lib/python3.11/site-packages/sqlalchemy/sql/base.py", line 2178, in _entity_namespace_key
+    raise exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Entity namespace for "report" has no property "from"

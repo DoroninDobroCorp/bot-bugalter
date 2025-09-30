@@ -1,0 +1,634 @@
+nohup: ignoring input
+ * Serving Flask app 'app'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8180
+ * Running on http://185.200.177.127:8180
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 636-631-001
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:22:36] "[32mGET /login?token=vrsinobusn&to=1 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:22:37] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:22:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:22:43] "[32mGET /login?token=kfyyqzpvfc&to=0 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:22:43] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:22:50] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:23:05] "GET /bookmaker/418 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:25:23] "[32mGET /login?token=jxxteeupnc&to=1 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:25:23] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:25:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:25:27] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:25:29] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:27:26] "GET /bookmaker/418 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:29:32] "[32mGET /login?token=vrsinobusn&to=1 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:29:32] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:29:34] "[31m[1mGET /favicon.ico HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:29:35] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:29:36] "[31m[1mGET /favicon.ico HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:30:39] "[32mPOST /report/26435/confirm_coef/ HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:30:39] "GET /bookmaker/418 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:30:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:30:44] "[32mPOST /report/26414/confirm_coef/ HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:30:44] "GET /bookmaker/418 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:30:47] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:31:43] "GET /bookmaker/451 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:31:47] "[32mPOST /report/26415/confirm_coef/ HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:31:47] "GET /bookmaker/451 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:31:52] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:31:53] "GET /bookmaker/398 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:32:37] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:32:40] "GET /bookmaker/380 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:33:35] "[32mPOST /report/26427/confirm_coef/ HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:33:36] "GET /bookmaker/380 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:33:37] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:33:39] "GET /bookmaker/398 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:33:46] "[32mPOST /report/26426/confirm_coef/ HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:33:47] "GET /bookmaker/398 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:34:10] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:34:13] "GET /bookmaker/380 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:35:15] "[32mGET /login?token=xtnarphzgs&to=0 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:35:15] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:35:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:37:08] "[32mPOST /report/26443/confirm_coef/ HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:37:08] "GET /bookmaker/380 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:37:11] "[32mPOST /report/26444/confirm_coef/ HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:37:11] "GET /bookmaker/380 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:37:15] "[32mPOST /report/26445/confirm_coef/ HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:37:15] "GET /bookmaker/380 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:37:18] "[32mPOST /report/26446/confirm_coef/ HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:37:18] "GET /bookmaker/380 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:37:20] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:37:21] "GET /bookmaker/457 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:38:11] "GET /bookmaker/418 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:38:20] "[32mPOST /report/26449/confirm_coef/ HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:38:21] "GET /bookmaker/457 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:38:22] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:38:26] "GET /bookmaker/398 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:39:36] "[32mPOST /report/26423/confirm_coef/ HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:39:36] "GET /bookmaker/398 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:39:38] "[32mPOST /report/26424/confirm_coef/ HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:39:38] "GET /bookmaker/398 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:39:42] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:41:20] "[32mPOST /report/26433/confirm_coef/ HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:41:20] "GET /bookmaker/418 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:41:22] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:41:24] "GET /bookmaker/398 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:41:31] "[32mPOST /report/26434/confirm_coef/ HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:41:31] "GET /bookmaker/398 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:41:33] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:41:35] "GET /bookmaker/453 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:41:51] "[32mPOST /report/26436/confirm_coef/ HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:41:51] "GET /bookmaker/453 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:41:53] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:41:54] "GET /bookmaker/452 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:43:55] "[32mGET /login?token=xtnarphzgs&to=0 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:43:55] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:44:04] "GET /bookmaker/452 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:44:05] "[32mPOST /report/26437/confirm_coef/ HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:44:05] "GET /bookmaker/452 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:44:07] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:44:10] "[32mGET /login?token=oemyhlyamw&to=0 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:44:10] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:44:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:44:18] "GET /bookmaker/452 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:44:36] "[32mPOST /report/26438/confirm_coef/ HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:44:36] "GET /bookmaker/452 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:44:39] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:44:40] "GET /bookmaker/462 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:44:52] "[32mPOST /report/26451/confirm_coef/ HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:44:53] "GET /bookmaker/462 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:45:00] "[32mPOST /report/26452/confirm_coef/ HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:45:00] "GET /bookmaker/462 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 14:45:04] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 15:14:06] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 17:01:41] "[32mGET /login?token=xtnarphzgs&to=0 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 17:01:41] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 17:01:42] "GET /bookmaker/380 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 17:01:46] "[32mPOST /report/26455/confirm_coef/ HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 17:01:46] "GET /bookmaker/380 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 17:01:49] "[32mPOST /report/26456/confirm_coef/ HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 17:01:49] "GET /bookmaker/380 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 17:01:51] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/root/bot-bugalter/flask_app/data/models.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 636-631-001
+INFO:werkzeug:147.185.133.0 - - [28/Sep/2025 18:32:31] "[31m[1mGET / HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 19:22:27] "[32mGET /login?token=tjoqawhplh&to=0 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 19:22:27] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 19:22:33] "GET /bookmaker/418 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 19:22:38] "[32mPOST /report/26457/confirm_coef/ HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 19:22:38] "GET /bookmaker/418 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 19:22:42] "[32mPOST /report/26458/confirm_coef/ HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 19:22:42] "GET /bookmaker/418 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 19:22:48] "[32mPOST /report/26459/confirm_coef/ HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 19:22:49] "GET /bookmaker/418 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 19:22:52] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 19:22:53] "GET /bookmaker/398 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 19:23:27] "[32mPOST /report/26453/confirm_coef/ HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 19:23:27] "GET /bookmaker/398 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 19:23:31] "[32mPOST /report/26454/confirm_coef/ HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 19:23:32] "GET /bookmaker/398 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 19:23:35] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 19:39:23] "[32mGET /login?token=oemyhlyamw&to=0 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 19:39:23] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 19:39:25] "GET /bookmaker/452 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 19:39:30] "[32mPOST /report/26460/confirm_coef/ HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 19:39:30] "GET /bookmaker/452 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 19:47:42] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 20:10:28] "[31m[1mGET /robots.txt HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 20:10:29] "[31m[1mGET /matches HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 21:54:28] "[31m[1mGET /robots.txt HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 21:54:29] "[31m[1mGET /reports HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 23:52:35] "[32mGET /login?token=oemyhlyamw&to=0 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 23:52:35] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2025 23:52:37] "GET /bookmaker/468 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 05:36:22] "[31m[1mGET /matches HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 09:00:37] "[32mGET /login?token=oemyhlyamw&to=0 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 09:00:37] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 09:00:39] "GET /bookmaker/468 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 09:03:15] "[32mGET /login?token=oemyhlyamw&to=0 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 09:03:15] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 09:03:16] "GET /bookmaker/468 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 09:03:31] "[32mPOST /report/26461/confirm_coef/ HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 09:03:31] "GET /bookmaker/468 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 10:52:16] "[32mGET /login?token=xtnarphzgs&to=0 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 10:52:16] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 10:52:16] "[31m[1mGET /favicon.ico HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 13:05:27] "[31m[1mGET /matches HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 15:16:55] "[32mGET /login?token=vrsinobusn&to=1 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 15:16:56] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 15:16:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 15:17:00] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 15:17:01] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 15:17:31] "POST /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 15:18:17] "GET /report/26334 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 15:18:25] "[32mPOST /report/26334/confirm_edit HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 15:18:26] "GET /match/hQum0ypDS4 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 15:18:30] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 15:18:41] "POST /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 15:18:56] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 15:18:59] "GET /match/tUiFTKCWZP HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 15:19:02] "[32mPOST /match/tUiFTKCWZP/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 15:19:02] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 15:19:04] "GET /match/0FqIPRnzD7 HTTP/1.1" 200 -
+INFO:werkzeug:3.131.215.38 - - [29/Sep/2025 15:43:57] "[31m[1mGET / HTTP/1.1[0m" 401 -
+INFO:werkzeug:3.131.215.38 - - [29/Sep/2025 15:46:10] "[31m[1mGET / HTTP/1.1[0m" 401 -
+ERROR:werkzeug:3.131.215.38 - - [29/Sep/2025 15:48:36] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:3.131.215.38 - - [29/Sep/2025 15:48:36] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03¼\x04\x0f4=\x9d\x09ÉÇ\\ØW\\\x89ÙF\x0bÌö6\x8b\x07\x88\x8fóè\x92\x95¾·Ù\x97\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+ERROR:werkzeug:3.131.215.38 - - [29/Sep/2025 15:50:36] code 400, message Bad request syntax ('SSH-2.0-Go')
+INFO:werkzeug:3.131.215.38 - - [29/Sep/2025 15:50:36] "[31m[1mSSH-2.0-Go[0m" 400 -
+ERROR:werkzeug:3.131.215.38 - - [29/Sep/2025 15:52:51] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:3.131.215.38 - - [29/Sep/2025 15:52:51] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03Ú>\x09Å¥SH\x1eUsÇ+§OóS\x14\x80+Ñz4Ï¿¹\x90\x03ó(\x83\x8d­\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+INFO:werkzeug: * Detected change in '/root/bot-bugalter/flask_app/data/models.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 636-631-001
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:31:40] "[32mGET /login?token=vrsinobusn&to=1 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:31:41] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:31:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:31:47] "GET /match/zLsMiPF8LJ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:31:50] "[32mPOST /match/zLsMiPF8LJ/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:31:50] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:31:52] "GET /match/zFADNP6eIF HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:31:54] "[32mPOST /match/zFADNP6eIF/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:31:54] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:31:56] "GET /match/wXVlqt0hb0 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:31:58] "[32mPOST /match/wXVlqt0hb0/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:31:58] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:32:12] "GET /match/DTKJWEXqpZ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:32:16] "[32mPOST /match/DTKJWEXqpZ/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:32:16] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:32:17] "GET /match/0FqIPRnzD7 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:32:20] "[32mPOST /match/0FqIPRnzD7/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:32:20] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:32:22] "GET /match/8FY1AbZf5E HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:32:23] "[32mPOST /match/8FY1AbZf5E/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:32:23] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:32:24] "GET /match/AXaMKyHxBW HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:32:26] "[32mPOST /match/AXaMKyHxBW/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:32:26] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:32:28] "GET /match/jM91pRjXqX HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:32:29] "[32mPOST /match/jM91pRjXqX/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:32:30] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:32:31] "GET /match/TAegAG62Vs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:32:33] "[32mPOST /match/TAegAG62Vs/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:32:34] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:32:35] "GET /match/DS761VMLm5 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:32:38] "[32mPOST /match/DS761VMLm5/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:32:39] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:32:40] "GET /match/DTKJWEXqpZ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:32:42] "[32mPOST /match/DTKJWEXqpZ/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:32:42] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:32:43] "GET /match/DS761VMLm5 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:32:45] "[32mPOST /match/DS761VMLm5/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:32:45] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:32:47] "GET /match/s6a9KvAfLV HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:32:49] "[32mPOST /match/s6a9KvAfLV/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:32:49] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:32:50] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:32:53] "GET /bookmaker/452 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:32:57] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:32:58] "GET /match/DS761VMLm5 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:33:01] "[32mPOST /match/DS761VMLm5/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:33:01] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:33:03] "GET /match/DS761VMLm5 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:33:04] "[32mPOST /match/DS761VMLm5/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:33:04] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:33:06] "GET /match/DS761VMLm5 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:33:07] "[32mPOST /match/DS761VMLm5/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:33:08] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:33:09] "GET /match/DS761VMLm5 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:33:11] "[32mPOST /match/DS761VMLm5/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:33:12] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:34:04] "GET /match/DS761VMLm5 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:35:04] "GET /report/26456 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:37:49] "GET /match/DS761VMLm5 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 16:39:15] "GET /match/DS761VMLm5 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:07:58] "GET /match/DTKJWEXqpZ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:08:03] "GET /match/cDktauyCoD HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:08:06] "GET /match/jnv3ebapuU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:08:31] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:08:33] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:08:34] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:08:37] "GET /report/26464 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:08:44] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:08:45] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:08:47] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:08:50] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:08:52] "GET /match/DS761VMLm5 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:14:09] "GET /match/DS761VMLm5 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:14:12] "[32mPOST /match/DS761VMLm5/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:14:12] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:14:14] "GET /match/DS761VMLm5 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:14:16] "[32mPOST /match/DS761VMLm5/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:14:16] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:14:18] "GET /match/DS761VMLm5 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:14:19] "GET /report/26456 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:14:22] "[32mPOST /report/26456/confirm_edit HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:14:22] "GET /match/DS761VMLm5 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:14:24] "[32mPOST /match/DS761VMLm5/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:14:24] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:14:27] "GET /match/DTKJWEXqpZ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:14:32] "[32mPOST /match/DTKJWEXqpZ/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:14:32] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:15:57] "GET /match/DTKJWEXqpZ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:01] "[32mPOST /match/DTKJWEXqpZ/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:02] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:03] "GET /match/DTKJWEXqpZ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:05] "[32mPOST /match/DTKJWEXqpZ/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:05] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:07] "GET /match/DTKJWEXqpZ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:09] "GET /report/26424 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:11] "[32mPOST /report/26424/confirm_edit HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:11] "GET /match/DTKJWEXqpZ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:13] "[32mPOST /match/DTKJWEXqpZ/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:14] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:16] "GET /match/JvNwobpaMq HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:17] "[32mPOST /match/JvNwobpaMq/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:18] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:20] "GET /match/ZikvrM4aDg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:22] "[32mPOST /match/ZikvrM4aDg/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:22] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:25] "GET /match/b2bablkXAA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:26] "[32mPOST /match/b2bablkXAA/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:27] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:29] "GET /match/cDktauyCoD HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:31] "[32mPOST /match/cDktauyCoD/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:31] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:33] "GET /match/jnv3ebapuU HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:34] "[32mPOST /match/jnv3ebapuU/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:35] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:38] "GET /match/JvNwobpaMq HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:39] "[32mPOST /match/JvNwobpaMq/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:40] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:41] "GET /match/JvNwobpaMq HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:44] "[32mPOST /match/JvNwobpaMq/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:45] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:46] "GET /match/cf6doz3P0j HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:47] "[32mPOST /match/cf6doz3P0j/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:48] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:49] "GET /match/h3vI9H1KPn HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:51] "[32mPOST /match/h3vI9H1KPn/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:52] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:54] "GET /match/h3vI9H1KPn HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:55] "[32mPOST /match/h3vI9H1KPn/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:55] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:57] "GET /match/tUiFTKCWZP HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:16:59] "[32mPOST /match/tUiFTKCWZP/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:00] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:02] "GET /match/yx6CljW4ik HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:03] "[32mPOST /match/yx6CljW4ik/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:04] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:06] "GET /match/sv5a8niDBk HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:09] "GET /report/26414 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:11] "[32mPOST /report/26414/confirm_edit HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:11] "GET /match/sv5a8niDBk HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:13] "GET /report/26408 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:15] "[32mPOST /report/26408/confirm_edit HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:15] "GET /match/sv5a8niDBk HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:17] "[32mPOST /match/sv5a8niDBk/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:17] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:19] "GET /match/k7Rildlouu HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:21] "[32mPOST /match/k7Rildlouu/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:21] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:22] "GET /match/tUiFTKCWZP HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:24] "[32mPOST /match/tUiFTKCWZP/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:24] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:26] "GET /match/yx6CljW4ik HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:29] "[32mPOST /match/yx6CljW4ik/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:29] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:31] "GET /match/yx6CljW4ik HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:33] "GET /report/26357 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:35] "[32mPOST /report/26357/confirm_edit HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:35] "GET /match/yx6CljW4ik HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:37] "GET /report/26356 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:39] "[32mPOST /report/26356/confirm_edit HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:39] "GET /match/yx6CljW4ik HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:42] "GET /report/26356 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:43] "[32mPOST /report/26356/confirm_edit HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:44] "GET /match/yx6CljW4ik HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:45] "[32mPOST /match/yx6CljW4ik/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:46] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:48] "GET /match/tUiFTKCWZP HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:50] "GET /report/26394 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:53] "[32mPOST /report/26394/confirm_edit HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:53] "GET /match/tUiFTKCWZP HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:54] "[32mPOST /match/tUiFTKCWZP/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:55] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:57] "GET /match/xHrVQTtKUQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:59] "[32mPOST /match/xHrVQTtKUQ/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:17:59] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:162.216.150.52 - - [29/Sep/2025 17:18:08] "[31m[1mGET / HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:09] "GET /match/xHrVQTtKUQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:15] "GET /match/jM91pRjXqX HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:17] "[32mPOST /match/jM91pRjXqX/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:17] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:18] "GET /match/nxdVbdwR7f HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:20] "[32mPOST /match/nxdVbdwR7f/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:20] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:21] "GET /match/DS761VMLm5 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:23] "[32mPOST /match/DS761VMLm5/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:23] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:25] "GET /match/DS761VMLm5 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:27] "GET /report/26459 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:29] "[32mPOST /report/26459/confirm_edit HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:29] "GET /match/DS761VMLm5 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:31] "[32mPOST /match/DS761VMLm5/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:31] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:32] "GET /match/DTKJWEXqpZ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:34] "[32mPOST /match/DTKJWEXqpZ/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:35] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:36] "GET /match/h3vI9H1KPn HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:38] "GET /report/26429 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:40] "[32mPOST /report/26429/confirm_edit HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:41] "GET /match/h3vI9H1KPn HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:42] "[32mPOST /match/h3vI9H1KPn/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:42] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:44] "GET /match/DTKJWEXqpZ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:47] "GET /report/26423 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:49] "[32mPOST /report/26423/confirm_edit HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:49] "GET /match/DTKJWEXqpZ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:51] "GET /report/26418 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:52] "[32mPOST /report/26418/confirm_edit HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:53] "GET /match/DTKJWEXqpZ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:55] "GET /report/26423 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:57] "[32mPOST /report/26423/confirm_edit HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:57] "GET /match/DTKJWEXqpZ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:59] "[32mPOST /match/DTKJWEXqpZ/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:20:59] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:03] "GET /match/nxdVbdwR7f HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:04] "GET /report/26441 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:06] "[32mPOST /report/26441/confirm_edit HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:06] "GET /match/nxdVbdwR7f HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:09] "GET /report/26454 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:10] "[32mPOST /report/26454/confirm_edit HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:11] "GET /match/nxdVbdwR7f HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:13] "[32mPOST /match/nxdVbdwR7f/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:13] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:15] "GET /match/jM91pRjXqX HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:17] "[32mPOST /match/jM91pRjXqX/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:17] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:19] "GET /match/jM91pRjXqX HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:20] "GET /report/26457 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:22] "[32mPOST /report/26457/confirm_edit HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:23] "GET /match/jM91pRjXqX HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:24] "[32mPOST /match/jM91pRjXqX/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:24] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:25] "GET /match/h3vI9H1KPn HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:28] "GET /report/26428 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:30] "[32mPOST /report/26428/confirm_edit HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:30] "GET /match/h3vI9H1KPn HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:31] "[32mPOST /match/h3vI9H1KPn/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:31] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:33] "GET /match/JvNwobpaMq HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:36] "GET /report/26447 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:37] "[32mPOST /report/26447/confirm_edit HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:38] "GET /match/JvNwobpaMq HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:39] "[32mPOST /match/JvNwobpaMq/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:40] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:41] "GET /match/JvNwobpaMq HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:43] "GET /report/26448 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:45] "[32mPOST /report/26448/confirm_edit HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:45] "GET /match/JvNwobpaMq HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:46] "[32mPOST /match/JvNwobpaMq/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:47] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:48] "GET /match/JvNwobpaMq HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:50] "GET /report/26449 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:51] "[32mPOST /report/26449/confirm_edit HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:52] "GET /match/JvNwobpaMq HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:53] "[32mPOST /match/JvNwobpaMq/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:53] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:55] "GET /match/JvNwobpaMq HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:57] "[32mPOST /match/JvNwobpaMq/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:57] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:21:58] "GET /match/JvNwobpaMq HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:22:00] "[32mPOST /match/JvNwobpaMq/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:22:00] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:22:01] "GET /match/JvNwobpaMq HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:22:03] "GET /report/26453 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:22:05] "[32mPOST /report/26453/confirm_edit HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:22:06] "GET /match/JvNwobpaMq HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:22:07] "[32mPOST /match/JvNwobpaMq/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:22:07] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:22:09] "GET /match/DTKJWEXqpZ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:22:10] "GET /report/26419 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:22:13] "[32mPOST /report/26419/confirm_edit HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:22:13] "GET /match/DTKJWEXqpZ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:22:15] "GET /report/26421 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:22:17] "[32mPOST /report/26421/confirm_edit HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:22:17] "GET /match/DTKJWEXqpZ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:22:20] "GET /report/26420 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:22:22] "[32mPOST /report/26420/confirm_edit HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:22:22] "GET /match/DTKJWEXqpZ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:22:23] "[32mPOST /match/DTKJWEXqpZ/mark_checked HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:22:23] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:22:25] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:22:26] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:26:09] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:57:14] "[32mGET /login?token=vrsinobusn&to=1 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:57:14] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:57:17] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:57:17] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:57:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:57:23] "POST /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:57:28] "GET /report/26407 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:57:40] "GET /report/26407 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 17:58:19] "GET /report/26407 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 18:08:46] "[32mPOST /report/26407/confirm_edit HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 18:08:47] "GET /match/pYkjDMPsSD HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 18:35:00] "[32mGET /login?token=vrsinobusn&to=1 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 18:35:00] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 18:35:04] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 18:35:10] "POST /reports HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/root/bot-bugalter/flask_app/data/models.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 636-631-001
+ * Serving Flask app 'app'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8180
+ * Running on http://185.200.177.127:8180
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 510-988-285
+ * Serving Flask app 'app'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8180
+ * Running on http://185.200.177.127:8180
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 510-988-285
+ * Serving Flask app 'app'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8180
+ * Running on http://185.200.177.127:8180
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 510-988-285
+ * Serving Flask app 'app'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8180
+ * Running on http://185.200.177.127:8180
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 140-295-646
+ * Serving Flask app 'app'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8180
+ * Running on http://185.200.177.127:8180
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 510-988-285
+ * Serving Flask app 'app'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8180
+ * Running on http://185.200.177.127:8180
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 510-988-285
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 21:28:49] "[32mGET /login?token=errjjxhdur&to=0 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 21:28:49] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 21:28:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 21:28:52] "GET /bookmaker/452 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 21:28:56] "[32mPOST /report/26466/confirm_coef/ HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 21:28:56] "GET /bookmaker/452 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 21:28:58] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 21:28:59] "GET /bookmaker/453 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 21:29:04] "[32mPOST /report/26468/confirm_coef/ HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 21:29:04] "GET /bookmaker/453 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 21:29:06] "GET /bookmakers HTTP/1.1" 200 -
+ * Serving Flask app 'app'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8180
+ * Running on http://185.200.177.127:8180
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 510-988-285
+Traceback (most recent call last):
+  File "/root/bot-bugalter/flask_app/app.py", line 3, in <module>
+    from flask import Flask, render_template, redirect, url_for, abort, request, make_response, g, jsonify
+ModuleNotFoundError: No module named 'flask'
+ * Serving Flask app 'app'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8180
+ * Running on http://185.200.177.127:8180
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 510-988-285
+ * Serving Flask app 'app'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8180
+ * Running on http://185.200.177.127:8180
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 145-797-147
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 23:34:07] "[31m[1mGET /robots.txt HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [29/Sep/2025 23:34:08] "[31m[1mGET / HTTP/1.1[0m" 401 -
+INFO:werkzeug:185.247.137.174 - - [29/Sep/2025 23:52:31] "[31m[1mGET / HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 00:04:05] "[32mGET /login?token=jxxteeupnc&to=1 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 00:04:06] "GET /matches HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 00:04:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 00:04:11] "GET /reports HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 00:55:20] "[32mGET /login?token=oemyhlyamw&to=0 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 00:55:20] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 00:55:24] "GET /bookmaker/453 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 00:55:30] "[32mPOST /report/26469/confirm_coef/ HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 00:55:30] "GET /bookmaker/453 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 00:55:32] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 00:55:34] "GET /bookmaker/398 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 00:55:40] "[32mPOST /report/26467/confirm_coef/ HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 00:55:40] "GET /bookmaker/398 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 01:43:35] "[31m[1mGET /robots.txt HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 01:43:35] "[31m[1mGET /reports HTTP/1.1[0m" 401 -
+INFO:werkzeug: * Detected change in '/root/bot-bugalter/flask_app/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 145-797-147
+INFO:werkzeug: * Detected change in '/root/bot-bugalter/flask_app/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 145-797-147
+INFO:werkzeug: * Detected change in '/root/bot-bugalter/flask_app/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 145-797-147
+ * Serving Flask app 'app'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8180
+ * Running on http://185.200.177.127:8180
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 505-320-548

@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block title %}Матчи для проверки{% endblock %}
+{% block header %}Матчи для проверки{% endblock %}
+{% block mobile_header %}Матчи для проверки{% endblock %}
+
+{% block content %}
+<!-- Фильтры -->
+<div class="bg-white rounded-lg shadow-md p-6 mb-8">
+    <form method="post" class="sm:flex sm:items-end sm:space-x-4 space-y-4 sm:space-y-0">
+        <div class="flex-grow">
+            <label for="filter_date" class="block text-sm font-medium leading-6 text-gray-900">Дата</label>
+            <div class="mt-2">
+                <input type="date" name="filter_date" id="filter_date" class="block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-accent sm:text-sm sm:leading-6 transition" value="{{ filter_date }}">
+            </div>
+        </div>
+        <div class="flex-grow">
+            <label for="filter_source" class="block text-sm font-medium leading-6 text-gray-900">Источник</label>
+            <div class="mt-2">
+                <select name="filter_source" id="filter_source" class="block w-full rounded-md border-0 py-2 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-accent sm:text-sm sm:leading-6 transition">
+                    <option value="">Все источники</option>
+                    {% for source in sources %}
+                    <option value="{{ source.id }}" {% if filter_source == source.id|string %}selected{% endif %}>{{ source.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <div>
+            <button type="submit" class="w-full sm:w-auto rounded-md bg-accent px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-accent-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent transition-colors">
+                Применить фильтр
+            </button>
+        </div>
+    </form>
+</div>
+
+    {% if matches %}
+        <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {% for match in matches %}
+                <a href="{{ url_for('match_detail', match_id=match.id) }}" class="group block bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                    <div class="p-5">
+                        <div class="flex items-center justify-between">
+                            <p class="text-sm font-medium text-accent truncate">{{ match.name }}</p>
+                            <div class="ml-2 flex-shrink-0 flex">
+                                <p class="inline-flex items-center rounded-full bg-red-100 px-2.5 py-0.5 text-sm font-semibold text-danger">
+                                    {{ match.unchecked_reports|length }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="mt-2 sm:flex sm:justify-between">
+                            <div class="sm:flex">
+                                <p class="flex items-center text-sm text-gray-500">
+                                    {% if match.date_min and match.date_max %}
+                                        {% if match.date_min.date() == match.date_max.date() %}
+                                            {{ match.date_min.strftime('%d.%m.%Y') }}
+                                        {% else %}
+                                            {{ match.date_min.strftime('%d.%m') }} - {{ match.date_max.strftime('%d.%m.%Y') }}
+                                        {% endif %}
+                                    {% else %}
+                                        Ожидают проверки
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 group-hover:bg-gray-100 px-5 py-3 text-sm font-medium text-gray-600 text-center transition-colors duration-300">
+                        Перейти к проверке &rarr;
+                    </div>
+                </a>
+            {% endfor %}
+        </ul>
+    {% elif search_performed %}
+        <div class="bg-blue-100 border-l-4 border-blue-500 text-blue-800 p-4 rounded-md" role="alert">
+            <p class="font-bold">Матчи не найдены</p>
+            <p>По заданным фильтрам нет матчей с непроверенными отчетами.</p>
+        </div>
+    {% else %}
+        <div class="bg-green-100 border-l-4 border-success text-green-800 p-4 rounded-md" role="alert">
+            <p class="font-bold">Все отчеты проверены</p>
+            <p>Нет матчей с непроверенными отчетами.</p>
+        </div>
+    {% endif %}
+{% endblock %}

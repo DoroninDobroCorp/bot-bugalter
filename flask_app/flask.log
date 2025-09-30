@@ -1,0 +1,20 @@
+ * Serving Flask app 'app'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8180
+ * Running on http://185.200.177.127:8180
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 505-320-548
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 13:13:58] "[32mGET /login?token=oemyhlyamw&to=0 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 13:13:58] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 13:14:00] "GET /bookmaker/468 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 13:14:09] "[32mPOST /report/26470/confirm_coef/ HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 13:14:09] "GET /bookmaker/468 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 13:20:46] "[32mGET /login?token=hqgagvfljz&to=0 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 13:20:46] "GET /bookmakers HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 13:20:47] "[31m[1mGET /favicon.ico HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 13:20:48] "GET /bookmaker/468 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2025 13:20:49] "[31m[1mGET /favicon.ico HTTP/1.1[0m" 401 -

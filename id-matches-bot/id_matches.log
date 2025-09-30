@@ -1,0 +1,9 @@
+Bot started! (match-ids-bot)
+Bot started! (match-ids-bot)
+Bot started! (match-ids-bot)
+Bot started! (match-ids-bot)
+set_ids_topic called: chat_id=-1002969517449, thread_id=None, chat_type=supergroup, is_forum=True
+General topic detected: chat -1002969517449 -> thread 1
+set_ids_topic called: chat_id=-1002969517449, thread_id=62, chat_type=supergroup, is_forum=True
+Topic set: chat -1002969517449 -> thread 62
+set_ids_topic called: chat_id=-1002949289864, thread_id=None, chat_type=supergroup, is_forum=None

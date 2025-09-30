@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Токен истёк{% endblock %}
+{% block header %}Токен истёк{% endblock %}
+{% block mobile_header %}Токен истёк{% endblock %}
+
+
+{% block content %}
+<div class="bg-red-100 border-l-4 border-red-500 text-red-800 p-4" role="alert">
+    <p class="font-bold">Ваш токен доступа истёк</p>
+    <p class="mt-1">Пожалуйста, сгенерируйте новый токен доступа в Telegram-боте.</p>
+    <p class="mt-4 text-xs text-red-700">Токен: {{ token }}</p>
+</div>
+{% endblock %}
